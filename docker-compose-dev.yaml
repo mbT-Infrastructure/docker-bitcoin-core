@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+
+    bitcoin:
+        container_name: bitcoin
+        build: .
+        environment:
+            - EXTERNAL_IP_ADDRESS=1.2.3.4
+        volumes:
+            - "./data-local:/media/bitcoin"
