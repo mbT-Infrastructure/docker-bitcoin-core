@@ -2,10 +2,10 @@ version: "3.8"
 
 services:
 
-    bitcoin:
-        container_name: bitcoin
+    bitcoin-core:
+        container_name: bitcoin-core
         build: .
-        environment:
-            - EXTERNAL_IP_ADDRESS=1.2.3.4
         volumes:
             - "./data-local:/media/bitcoin"
+        ports:
+            - "127.0.0.1:8332-8333:8332-8333"
